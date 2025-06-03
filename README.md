@@ -1,4 +1,5 @@
-```
+
+```markdown
 # AI Agent Chat Interface
 
 A scalable Gradio interface for multiple AI agents with streaming responses.
@@ -7,10 +8,9 @@ A scalable Gradio interface for multiple AI agents with streaming responses.
 
 [![Watch the demo](https://img.youtube.com/vi/GagLu0mnoiU/0.jpg)](https://youtu.be/GagLu0mnoiU)
 
-
 ## Features
 
-- 🚀 **Multi-agent support** (Business, Blog, Songwtiter, etc.)
+- 🚀 **Multi-agent support** (Business, Blog, Songwriter, etc.)
 - 💬 **Real-time streaming** responses
 - 📂 **Save conversations** in TXT/JSON
 - 🛠️ **Easy to extend** with new agents
@@ -51,7 +51,7 @@ A scalable Gradio interface for multiple AI agents with streaming responses.
            name="LegalAssistant",
            instructions="Generate legal documents...",
            output_type=LegalDoc,
-           model="gpt-4"
+           model="gpt-4o-mini"
        )
    ```
 
@@ -82,4 +82,5 @@ A scalable Gradio interface for multiple AI agents with streaming responses.
 
 ## License
 
-MIT © 2023 
+MIT © 2023
+```
