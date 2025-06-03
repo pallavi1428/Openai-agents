@@ -104,9 +104,9 @@ def create_interface() -> gr.Blocks:
         with gr.Row():
             # Sidebar
             with gr.Column(scale=1, min_width=250):
-                agent_selector = gr.Radio(
-                    ["Business", "Blog"],
-                    label="Select Agent",
+                agent_selector = gr.Dropdown(
+                    choices=["Business", "Blog", "Marketing", "Legal", "Technical", "Creative"],  # Add all agents here
+                    label="Select Agent Type",
                     value="Business"
                 )
 
