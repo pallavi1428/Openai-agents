@@ -1,0 +1,6 @@
+openai
+python-dotenv
+aiohttp
+openai-agents
+gradio>=4.0.0
+yfinance  # For stock agent
