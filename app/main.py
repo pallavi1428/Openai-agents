@@ -8,6 +8,38 @@ from dotenv import load_dotenv
 import gradio as gr
 from vagents.business import BusinessIdea
 from vagents.blog import BlogPost
+from vagents.stock_analyst import StockAnalysis
+from vagents.newsletter import Newsletter
+from vagents.github_readme import Readme
+from vagents.book_writer import BookOutline
+from vagents.therapist import TherapySession
+from vagents.sleep_analyzer import SleepAnalysis
+from vagents.health_assistant import HealthReport
+from vagents.messages_writer import MessageCollection
+from vagents.email_writer import Email
+from vagents.data_analyst import DataReport
+from vagents.song_generator import Song
+from vagents.book_summarizer import BookSummary
+from vagents.quick_learn import QuickLesson
+from vagents.vo_assistant import VoiceOverScript
+
+
+from vagents.tweet_writer import Tweet
+from vagents.thread_writer import Thread
+from vagents.travel_planner import TravelPlan
+from vagents.fitness_assistant import WorkoutPlan
+from vagents.graphic_designer import DesignBrief
+from vagents.report_generator import Report
+from vagents.friends_checkin import CheckinMessage
+from vagents.ocr_processor import OCRResult
+from vagents.notes_tagger import TaggedNote
+from vagents.web_researcher import ResearchResult
+from vagents.deep_researcher import DeepResearch
+from vagents.llm_tester import TestResult
+from vagents.image_generator import ImagePrompt
+from vagents.image_prompt_generator import EnhancedPrompt
+
+
 from vagents import Agent
 from app.runner import Runner
 from openai import OpenAI
@@ -105,7 +137,35 @@ def create_interface() -> gr.Blocks:
             # Sidebar
             with gr.Column(scale=1, min_width=250):
                 agent_selector = gr.Dropdown(
-                    choices=["Business", "Blog", "Marketing", "Legal", "Technical", "Creative"],  # Add all agents here
+                    choices=["Business", "Blog", "StockAnalyst",
+                            "Newsletter",
+                            "Readme",
+                            "BookWriter",
+                            "Therapist",
+                            "SleepAnalyzer",
+                            "HealthAssistant",
+                            "MessageWriter",
+                            "EmailWriter",
+                            "DataAnalyst",
+                            "SongWriter",
+                            "BookSummarizer",
+                            "QuickLearn",
+                            "VoiceOver",
+                            "TweetWriter",
+                            "ThreadWriter",
+                            "TravelPlanner",
+                            "FitnessAssistant",
+                            "GraphicDesigner",
+                            "ReportGenerator",
+                            "FriendsCheckin",
+                            "OCRProcessor",
+                            "NotesTagger",
+                            "WebResearcher",
+                            "DeepResearcher",
+                            "LLMTester",
+                            "ImageGenerator",
+                            "ImagePromptGenerator"
+                        ], 
                     label="Select Agent Type",
                     value="Business"
                 )

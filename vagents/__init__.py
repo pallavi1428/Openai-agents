@@ -16,6 +16,22 @@ from .book_summarizer import create_summary_agent, BookSummary
 from .quick_learn import create_quicklearn_agent, QuickLesson
 from .vo_assistant import create_vo_agent, VoiceOverScript
 
+# NEW AGENTS
+from .tweet_writer import create_tweet_agent, Tweet
+from .thread_writer import create_thread_agent, Thread
+from .travel_planner import create_travel_agent, TravelPlan
+from .fitness_assistant import create_fitness_agent, WorkoutPlan
+from .graphic_designer import create_design_agent, DesignBrief
+from .report_generator import create_report_agent, Report
+from .friends_checkin import create_checkin_agent, CheckinMessage
+from .ocr_processor import create_ocr_agent, OCRResult
+from .notes_tagger import create_tagger_agent, TaggedNote
+from .web_researcher import create_web_research_agent, ResearchResult
+from .deep_researcher import create_deep_research_agent, DeepResearch
+from .llm_tester import create_tester_agent, TestResult
+from .image_generator import create_image_agent, ImagePrompt
+from .image_prompt_generator import create_prompt_agent, EnhancedPrompt
+
 def create_agent(agent_type: str) -> Agent:
     agents = {
         "Business": create_business_agent(),
@@ -33,7 +49,23 @@ def create_agent(agent_type: str) -> Agent:
         "SongWriter": create_song_agent(),
         "BookSummarizer": create_summary_agent(),
         "QuickLearn": create_quicklearn_agent(),
-        "VoiceOver": create_vo_agent()
+        "VoiceOver": create_vo_agent(),
+        'Tweet': create_tweet_agent(),
+        "Thread": create_thread_agent(),
+        "TravelPlanner": create_travel_agent(),
+        "FitnessAssistant": create_fitness_agent(),
+        "GraphicDesigner": create_design_agent(),
+        "ReportGenerator": create_report_agent(),
+        "FriendsCheckin": create_checkin_agent(),
+        "OcrProcessor": create_ocr_agent(),
+        "NotesTagger": create_tagger_agent(),
+        "WebResearcher": create_web_research_agent(),
+        "DeepResearcher": create_deep_research_agent(),
+        "LlmTester": create_tester_agent(),
+        "ImageGenerator": create_image_agent(),
+        "ImagePromptGenerator": create_prompt_agent(),
+
+        
     }
     return agents.get(agent_type)
 
@@ -55,5 +87,19 @@ __all__ = [
     'Song',
     'BookSummary',
     'QuickLesson',
-    'VoiceOverScript'
+    'VoiceOverScript',
+    'Tweet',
+    'Thread',
+    'TravelPlan',
+    'WorkoutPlan',
+    'DesignBrief',
+    'Report',
+    'CheckinMessage',
+    'OCRResult',
+    'TaggedNote',
+    'ResearchResult',
+    'DeepResearch',
+    'TestResult',
+    'ImagePrompt',
+    'EnhancedPrompt'
 ]
